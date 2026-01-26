@@ -1,0 +1,226 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "@fontsource/playfair-display/400.css";
+@import "@fontsource/playfair-display/500.css";
+@import "@fontsource/playfair-display/600.css";
+@import "@fontsource/playfair-display/700.css";
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/inter/600.css";
+
+@layer base {
+  :root {
+    /* Parish color palette - serene and sacred */
+    --background: 40 30% 98%;
+    --foreground: 220 25% 15%;
+
+    --card: 40 25% 96%;
+    --card-foreground: 220 25% 15%;
+
+    --popover: 40 30% 98%;
+    --popover-foreground: 220 25% 15%;
+
+    /* Deep sacred blue */
+    --primary: 215 60% 28%;
+    --primary-foreground: 40 30% 98%;
+
+    /* Warm cream */
+    --secondary: 38 40% 92%;
+    --secondary-foreground: 220 25% 15%;
+
+    --muted: 40 20% 94%;
+    --muted-foreground: 220 15% 45%;
+
+    /* Golden accent - sacred and warm */
+    --accent: 38 75% 55%;
+    --accent-foreground: 220 25% 10%;
+
+    --destructive: 0 65% 50%;
+    --destructive-foreground: 40 30% 98%;
+
+    --border: 40 20% 88%;
+    --input: 40 20% 88%;
+    --ring: 215 60% 28%;
+
+    --radius: 0.5rem;
+
+    /* Custom parish colors */
+    --parish-gold: 38 75% 55%;
+    --parish-gold-light: 40 70% 85%;
+    --parish-blue: 215 60% 28%;
+    --parish-blue-light: 215 45% 45%;
+    --parish-cream: 40 35% 95%;
+    --parish-warm: 30 30% 97%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(215 60% 28%) 0%, hsl(215 45% 38%) 50%, hsl(220 40% 25%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(38 75% 55%) 0%, hsl(42 80% 65%) 100%);
+    --gradient-sacred: linear-gradient(180deg, hsl(40 30% 98%) 0%, hsl(40 25% 94%) 100%);
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(220 25% 15% / 0.08);
+    --shadow-card: 0 8px 30px -8px hsl(220 25% 15% / 0.12);
+    --shadow-elevated: 0 20px 50px -15px hsl(220 25% 15% / 0.15);
+
+    /* Typography */
+    --font-heading: "Playfair Display", Georgia, serif;
+    --font-body: "Inter", system-ui, sans-serif;
+
+    /* Sidebar - keeping defaults */
+    --sidebar-background: 40 30% 98%;
+    --sidebar-foreground: 220 25% 15%;
+    --sidebar-primary: 215 60% 28%;
+    --sidebar-primary-foreground: 40 30% 98%;
+    --sidebar-accent: 38 40% 92%;
+    --sidebar-accent-foreground: 220 25% 15%;
+    --sidebar-border: 40 20% 88%;
+    --sidebar-ring: 215 60% 28%;
+  }
+
+  .dark {
+    --background: 220 25% 10%;
+    --foreground: 40 30% 95%;
+
+    --card: 220 25% 14%;
+    --card-foreground: 40 30% 95%;
+
+    --popover: 220 25% 10%;
+    --popover-foreground: 40 30% 95%;
+
+    --primary: 38 75% 55%;
+    --primary-foreground: 220 25% 10%;
+
+    --secondary: 220 20% 18%;
+    --secondary-foreground: 40 30% 95%;
+
+    --muted: 220 20% 18%;
+    --muted-foreground: 40 15% 65%;
+
+    --accent: 38 75% 55%;
+    --accent-foreground: 220 25% 10%;
+
+    --destructive: 0 65% 45%;
+    --destructive-foreground: 40 30% 98%;
+
+    --border: 220 20% 20%;
+    --input: 220 20% 20%;
+    --ring: 38 75% 55%;
+
+    --sidebar-background: 220 25% 10%;
+    --sidebar-foreground: 40 30% 95%;
+    --sidebar-primary: 38 75% 55%;
+    --sidebar-primary-foreground: 220 25% 10%;
+    --sidebar-accent: 220 20% 18%;
+    --sidebar-accent-foreground: 40 30% 95%;
+    --sidebar-border: 220 20% 20%;
+    --sidebar-ring: 38 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    @apply tracking-tight;
+  }
+}
+
+@layer components {
+  /* Hero section styles */
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+
+  .gold-accent {
+    color: hsl(var(--accent));
+  }
+
+  .gold-underline {
+    position: relative;
+  }
+
+  .gold-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: var(--gradient-gold);
+    border-radius: 2px;
+  }
+
+  /* Card hover effects */
+  .card-hover {
+    @apply transition-all duration-300;
+  }
+
+  .card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-elevated);
+  }
+
+  /* Sacred divider */
+  .sacred-divider {
+    @apply flex items-center justify-center gap-4 my-8;
+  }
+
+  .sacred-divider::before,
+  .sacred-divider::after {
+    content: '';
+    @apply h-px bg-border flex-1 max-w-24;
+  }
+
+  /* Section background */
+  .section-cream {
+    background: var(--gradient-sacred);
+  }
+
+  /* WhatsApp button */
+  .whatsapp-float {
+    @apply fixed bottom-6 right-6 z-50;
+    animation: pulse-gentle 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse-gentle {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+  }
+
+  /* Cross icon decorative */
+  .cross-icon {
+    @apply text-accent opacity-30;
+  }
+}
+
+@layer utilities {
+  .font-heading {
+    font-family: var(--font-heading);
+  }
+
+  .font-body {
+    font-family: var(--font-body);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
