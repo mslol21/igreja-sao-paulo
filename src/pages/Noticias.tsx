@@ -4,6 +4,7 @@ import { Cross, Calendar, FileText, ArrowRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import heroImage from "@/assets/hero-church.jpg";
 
 const news = [
   {
@@ -69,8 +70,18 @@ const Noticias = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="relative py-20 lg:py-32 hero-gradient">
-        <div className="container mx-auto px-4 lg:px-8">
+      <section className="relative py-20 lg:py-32 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img
+            src={heroImage}
+            alt="Paróquia São Paulo Apóstolo"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-primary/80 backdrop-blur-sm" />
+        </div>
+
+        <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

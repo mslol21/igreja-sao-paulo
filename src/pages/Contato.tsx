@@ -16,13 +16,24 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import heroImage from "@/assets/hero-church.jpg";
 
 const Contato = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="relative py-20 lg:py-32 hero-gradient">
-        <div className="container mx-auto px-4 lg:px-8">
+      <section className="relative py-20 lg:py-32 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img
+            src={heroImage}
+            alt="Paróquia São Paulo Apóstolo"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-primary/80 backdrop-blur-sm" />
+        </div>
+
+        <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -68,8 +79,8 @@ const Contato = () => {
                       <div>
                         <h3 className="font-semibold text-foreground mb-1">Endereço</h3>
                         <p className="text-muted-foreground">
-                          Rua da Fé, 123 - Centro<br />
-                          São Paulo - SP, 01234-567
+                          Av. José Higino Neves, 1075<br />
+                          Jardim São Paulo - SP
                         </p>
                       </div>
                     </div>
@@ -84,24 +95,8 @@ const Contato = () => {
                       </div>
                       <div>
                         <h3 className="font-semibold text-foreground mb-1">Telefone</h3>
-                        <a href="tel:+551199999999" className="text-muted-foreground hover:text-accent transition-colors">
-                          (11) 9999-9999
-                        </a>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <Card>
-                  <CardContent className="p-6">
-                    <div className="flex items-start gap-4">
-                      <div className="flex items-center justify-center w-12 h-12 rounded-full bg-accent/10 text-accent flex-shrink-0">
-                        <Mail className="h-6 w-6" />
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-foreground mb-1">E-mail</h3>
-                        <a href="mailto:contato@paroquia.com.br" className="text-muted-foreground hover:text-accent transition-colors">
-                          contato@paroquia.com.br
+                        <a href="tel:+551125553970" className="text-muted-foreground hover:text-accent transition-colors">
+                          (11) 2555-3970
                         </a>
                       </div>
                     </div>
@@ -117,8 +112,8 @@ const Contato = () => {
                       <div>
                         <h3 className="font-semibold text-foreground mb-1">Horário de Atendimento</h3>
                         <p className="text-muted-foreground">
-                          Segunda a Sexta: 9h às 18h<br />
-                          Sábados: 9h às 12h
+                          Terça a Sexta: 9h às 12h e 13h30 às 17h<br />
+                          Sábado: 9h às 12h
                         </p>
                       </div>
                     </div>
@@ -140,7 +135,7 @@ const Contato = () => {
                 {/* Social Links */}
                 <div className="flex items-center justify-center gap-4 pt-4">
                   <a
-                    href="https://instagram.com/paroquia"
+                    href="https://instagram.com/paroquiaspaguaianases"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-3 rounded-full bg-muted hover:bg-accent/10 text-muted-foreground hover:text-accent transition-colors"
@@ -149,7 +144,7 @@ const Contato = () => {
                     <Instagram className="h-6 w-6" />
                   </a>
                   <a
-                    href="https://facebook.com/paroquia"
+                    href="https://www.facebook.com/p/Par%C3%B3quia-S%C3%A3o-Paulo-Ap%C3%B3stolo-Guaianases-100073569917650"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-3 rounded-full bg-muted hover:bg-accent/10 text-muted-foreground hover:text-accent transition-colors"

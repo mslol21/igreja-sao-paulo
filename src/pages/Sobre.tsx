@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Layout } from "@/components/layout/Layout";
 import { Cross, Heart, Users, Target, BookOpen } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import heroImage from "@/assets/hero-church.jpg";
 
 const values = [
   {
@@ -48,8 +49,18 @@ const Sobre = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 hero-gradient">
-        <div className="container mx-auto px-4 lg:px-8">
+      <section className="relative py-20 lg:py-32 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img
+            src={heroImage}
+            alt="Paróquia São Paulo Apóstolo"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-primary/80 backdrop-blur-sm" />
+        </div>
+
+        <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

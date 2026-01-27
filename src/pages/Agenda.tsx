@@ -3,6 +3,7 @@ import { Layout } from "@/components/layout/Layout";
 import { Calendar, MapPin, Clock, Cross } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import heroImage from "@/assets/hero-church.jpg";
 
 const events = [
   {
@@ -96,12 +97,23 @@ const categoryColors: Record<string, string> = {
   "Formação": "bg-orange-600 text-white",
 };
 
+
 const Agenda = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="relative py-20 lg:py-32 hero-gradient">
-        <div className="container mx-auto px-4 lg:px-8">
+      <section className="relative py-20 lg:py-32 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img
+            src={heroImage}
+            alt="Paróquia São Paulo Apóstolo"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-primary/80 backdrop-blur-sm" />
+        </div>
+
+        <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -221,15 +233,15 @@ const Agenda = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {[
-              { day: "Segunda", activity: "Terço dos Homens", time: "19h30" },
-              { day: "Terça", activity: "Grupo de Oração", time: "19h30" },
-              { day: "Quarta", activity: "Catequese de Adultos", time: "19h30" },
-              { day: "Quinta", activity: "Adoração ao Santíssimo", time: "19h30" },
-              { day: "Sexta", activity: "Pastoral Familiar", time: "20h" },
-              { day: "Sábado", activity: "Catequese Infantil", time: "9h" },
+              { day: "Segunda", activity: "Missa pelas Almas", time: "20h" },
+              { day: "Terça", activity: "Confissões", time: "13h30 - 17h" },
+              { day: "Terça", activity: "Terço dos Homens", time: "20h" },
+              { day: "Terça", activity: "Mães que Oram pelos Filhos", time: "20h" },
+              { day: "Quarta", activity: "Grupo de Oração Dom Bosco", time: "19h30" },
+              { day: "Sexta", activity: "Missa Semanal", time: "10h" },
             ].map((item, index) => (
               <motion.div
-                key={item.day}
+                key={`${item.day}-${item.activity}`}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}

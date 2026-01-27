@@ -11,7 +11,7 @@ export function HeroSection() {
       <div className="absolute inset-0">
         <img
           src={heroImage}
-          alt="Interior da Igreja"
+          alt="Fachada da Paróquia São Paulo Apóstolo"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-primary/50" />
@@ -67,7 +67,7 @@ export function HeroSection() {
                 WhatsApp
               </a>
               <a
-                href="https://instagram.com/paroquia"
+                href="https://instagram.com/paroquiaspaguaianases"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center text-primary-foreground/80 hover:text-primary-foreground transition-colors text-sm"

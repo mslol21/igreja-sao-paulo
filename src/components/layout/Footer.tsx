@@ -103,22 +103,22 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <Clock className="h-5 w-5 mt-0.5 opacity-80 flex-shrink-0" />
                 <div className="text-sm opacity-80">
-                  <p className="font-medium opacity-100">Domingos</p>
-                  <p>7h, 9h, 11h e 19h</p>
-                </div>
-              </li>
-              <li className="flex items-start gap-3">
-                <Clock className="h-5 w-5 mt-0.5 opacity-80 flex-shrink-0" />
-                <div className="text-sm opacity-80">
-                  <p className="font-medium opacity-100">Dias de Semana</p>
+                  <p className="font-medium opacity-100">Domingos (Matriz)</p>
                   <p>7h e 19h</p>
                 </div>
               </li>
               <li className="flex items-start gap-3">
                 <Clock className="h-5 w-5 mt-0.5 opacity-80 flex-shrink-0" />
                 <div className="text-sm opacity-80">
-                  <p className="font-medium opacity-100">Sábados</p>
-                  <p>7h e 17h</p>
+                  <p className="font-medium opacity-100">Segunda (Almas)</p>
+                  <p>20h</p>
+                </div>
+              </li>
+              <li className="flex items-start gap-3">
+                <Clock className="h-5 w-5 mt-0.5 opacity-80 flex-shrink-0" />
+                <div className="text-sm opacity-80">
+                  <p className="font-medium opacity-100">Terça, Sexta e Quarta</p>
+                  <p>10h (Ter/Sex) | 19h30 (Qua)</p>
                 </div>
               </li>
             </ul>
@@ -130,7 +130,7 @@ export function Footer() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-4">
               <a
-                href="https://instagram.com/paroquia"
+                href="https://instagram.com/paroquiaspaguaianases"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 rounded-full bg-primary-foreground/10 hover:bg-primary-foreground/20 transition-colors"
@@ -139,7 +139,7 @@ export function Footer() {
                 <Instagram className="h-5 w-5" />
               </a>
               <a
-                href="https://facebook.com/paroquia"
+                href="https://www.facebook.com/p/Par%C3%B3quia-S%C3%A3o-Paulo-Ap%C3%B3stolo-Guaianases-100073569917650"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 rounded-full bg-primary-foreground/10 hover:bg-primary-foreground/20 transition-colors"
@@ -161,6 +161,9 @@ export function Footer() {
               © {new Date().getFullYear()} Paróquia São Paulo Apóstolo. 
               Todos os direitos reservados.
             </p>
+            <Link to="/admin/login" className="text-xs opacity-40 hover:opacity-100 transition-opacity">
+              Acesso Administrativo
+            </Link>
           </div>
         </div>
       </div>

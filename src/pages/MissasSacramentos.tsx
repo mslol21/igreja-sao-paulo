@@ -4,6 +4,7 @@ import { Cross, Clock, Phone, Calendar } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import heroImage from "@/assets/hero-church.jpg";
 
 const sacramentos = [
   {
@@ -82,8 +83,18 @@ const MissasSacramentos = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="relative py-20 lg:py-32 hero-gradient">
-        <div className="container mx-auto px-4 lg:px-8">
+      <section className="relative py-20 lg:py-32 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img
+            src={heroImage}
+            alt="Paróquia São Paulo Apóstolo"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-primary/80 backdrop-blur-sm" />
+        </div>
+
+        <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -113,60 +124,105 @@ const MissasSacramentos = () => {
               <Cross className="h-6 w-6 text-accent" />
             </div>
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground text-center mb-12">
-              Horários das Santas Missas
+              Horários das Santas Missas na Paróquia
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto mb-12">
+              {/* Matriz */}
               <Card className="border-accent border-2">
                 <CardHeader className="text-center pb-2">
                   <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-accent text-accent-foreground mx-auto mb-2">
                     <Clock className="h-6 w-6" />
                   </div>
-                  <CardTitle className="font-heading text-xl">Domingos e Festas</CardTitle>
+                  <CardTitle className="font-heading text-xl">Igreja Matriz</CardTitle>
+                  <p className="text-xs text-muted-foreground">Av. José Higino Neves, 1075 - Jd. S. Paulo</p>
                 </CardHeader>
-                <CardContent className="text-center">
-                  <div className="space-y-2">
-                    <p className="text-2xl font-bold text-accent">7h | 9h | 11h | 19h</p>
-                    <p className="text-sm text-muted-foreground">Missa das 9h: com catequese infantil</p>
-                    <p className="text-sm text-muted-foreground">Missa das 11h: transmitida ao vivo</p>
-                  </div>
+                <CardContent>
+                  <ul className="space-y-2 text-sm">
+                    <li className="flex justify-between"><span>Segunda-feira (Almas)</span> <span className="font-bold text-accent">20h</span></li>
+                    <li className="flex justify-between"><span>Terça-feira</span> <span className="font-bold text-accent">10h</span></li>
+                    <li className="flex justify-between"><span>Sexta-feira</span> <span className="font-bold text-accent">10h</span></li>
+                    <li className="flex justify-between border-t border-muted pt-2 mt-2"><span>Domingo</span> <span className="font-bold text-accent">07h | 19h</span></li>
+                  </ul>
                 </CardContent>
               </Card>
 
+              {/* Rainha das Missões */}
               <Card>
                 <CardHeader className="text-center pb-2">
-                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-secondary text-secondary-foreground mx-auto mb-2">
-                    <Clock className="h-6 w-6" />
+                  <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-secondary text-secondary-foreground mx-auto mb-2">
+                    <Clock className="h-5 w-5" />
                   </div>
-                  <CardTitle className="font-heading text-xl">Segunda a Sexta</CardTitle>
+                  <CardTitle className="font-heading text-lg">Com. Rainha das Missões</CardTitle>
+                  <p className="text-xs text-muted-foreground">R. Luís de Sousa, 59 - Vila Marilena</p>
                 </CardHeader>
-                <CardContent className="text-center">
-                  <div className="space-y-2">
-                    <p className="text-2xl font-bold text-foreground">7h | 19h</p>
-                    <p className="text-sm text-muted-foreground">Após a missa das 19h: novena</p>
-                  </div>
+                <CardContent>
+                  <ul className="space-y-2 text-sm">
+                    <li className="flex justify-between"><span>Segunda-feira (Almas)</span> <span className="font-bold">15h</span></li>
+                    <li className="flex justify-between"><span>Quinta-feira</span> <span className="font-bold">20h</span></li>
+                    <li className="flex justify-between border-t border-muted pt-2 mt-2"><span>Domingo</span> <span className="font-bold">10h30</span></li>
+                  </ul>
                 </CardContent>
               </Card>
 
+              {/* N. Sra. Aparecida */}
               <Card>
                 <CardHeader className="text-center pb-2">
-                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-secondary text-secondary-foreground mx-auto mb-2">
-                    <Clock className="h-6 w-6" />
+                  <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-secondary text-secondary-foreground mx-auto mb-2">
+                    <Clock className="h-5 w-5" />
                   </div>
-                  <CardTitle className="font-heading text-xl">Sábados</CardTitle>
+                  <CardTitle className="font-heading text-lg">Com. N. Sra. Aparecida</CardTitle>
+                  <p className="text-xs text-muted-foreground">R. Poxim, 50 - Jd. São Carlos</p>
                 </CardHeader>
-                <CardContent className="text-center">
-                  <div className="space-y-2">
-                    <p className="text-2xl font-bold text-foreground">7h | 17h</p>
-                    <p className="text-sm text-muted-foreground">Confissões: 15h às 16h30</p>
+                <CardContent>
+                  <ul className="space-y-2 text-sm">
+                    <li className="flex justify-between"><span>Quinta-feira</span> <span className="font-bold">20h</span></li>
+                    <li className="flex justify-between"><span>Sexta-feira (Terço)</span> <span className="font-bold">20h</span></li>
+                    <li className="flex justify-between border-t border-muted pt-2 mt-2"><span>Domingo</span> <span className="font-bold">10h30</span></li>
+                  </ul>
+                </CardContent>
+              </Card>
+
+              {/* Santo Expedito */}
+              <Card>
+                <CardHeader className="text-center pb-2">
+                  <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-secondary text-secondary-foreground mx-auto mb-2">
+                    <Clock className="h-5 w-5" />
                   </div>
+                  <CardTitle className="font-heading text-lg">Com. Santo Expedito</CardTitle>
+                  <p className="text-xs text-muted-foreground">R. Dr. Francisco B. Tôrres, 251 - Conj. JK</p>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-2 text-sm">
+                    <li className="flex justify-between"><span>Terça-feira</span> <span className="font-bold">20h</span></li>
+                    <li className="flex justify-between border-t border-muted pt-2 mt-2"><span>Domingo</span> <span className="font-bold">09h</span></li>
+                  </ul>
+                </CardContent>
+              </Card>
+
+              {/* Santo Antônio */}
+              <Card>
+                <CardHeader className="text-center pb-2">
+                  <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-secondary text-secondary-foreground mx-auto mb-2">
+                    <Clock className="h-5 w-5" />
+                  </div>
+                  <CardTitle className="font-heading text-lg">Com. Santo Antônio</CardTitle>
+                  <p className="text-xs text-muted-foreground">R. Primavera, 9 - Vila Roseira II</p>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-2 text-sm">
+                    <li className="flex justify-between"><span>Terça-feira</span> <span className="font-bold">20h</span></li>
+                    <li className="flex justify-between border-t border-muted pt-2 mt-2"><span>Domingo</span> <span className="font-bold">09h</span></li>
+                  </ul>
                 </CardContent>
               </Card>
             </div>
 
-            <div className="text-center">
-              <p className="text-muted-foreground mb-4">
-                Em dias santos de guarda e datas especiais, confira a programação na seção de avisos.
+            <div className="text-center max-w-2xl mx-auto p-6 bg-muted/50 rounded-xl">
+              <h3 className="font-semibold mb-2">Confissões (Igreja Matriz)</h3>
+              <p className="text-sm text-muted-foreground">
+                Terças-feiras: 13h30 às 17h<br />
+                Ou mediante agendamento prévio na secretaria paroquial.
               </p>
             </div>
           </motion.div>

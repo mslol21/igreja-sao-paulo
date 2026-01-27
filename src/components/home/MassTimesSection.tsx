@@ -5,17 +5,17 @@ import { Card, CardContent } from "@/components/ui/card";
 const massSchedule = [
   {
     day: "Domingos",
-    times: ["7h", "9h", "11h", "19h"],
+    times: ["07h", "19h"],
     highlight: true,
   },
   {
-    day: "Segunda a Sexta",
-    times: ["7h", "19h"],
+    day: "Segunda e Sexta",
+    times: ["20h (Seg)", "10h (Sex)"],
     highlight: false,
   },
   {
-    day: "Sábados",
-    times: ["7h", "17h"],
+    day: "Terça e Quarta",
+    times: ["10h (Ter)", "19h30 (Qua)"],
     highlight: false,
   },
 ];
@@ -90,7 +90,7 @@ export function MassTimesSection() {
           className="mt-8 text-center"
         >
           <p className="text-sm text-muted-foreground">
-            <strong>Confissões:</strong> Sábados das 15h às 16h30 ou mediante agendamento
+            <strong>Confissões (Matriz):</strong> Terças-feiras das 13h30 às 17h ou mediante agendamento na secretaria.
           </p>
         </motion.div>
       </div>
