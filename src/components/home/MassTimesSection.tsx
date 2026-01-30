@@ -4,19 +4,29 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const massSchedule = [
   {
+    day: "Segunda",
+    times: ["20h (Missa p/ Almas)"],
+    highlight: false,
+  },
+  {
+    day: "Terça",
+    times: ["10h (Missa)", "13h30 (Confissões)", "20h (Terços)"],
+    highlight: false,
+  },
+  {
+    day: "Quarta",
+    times: ["19h30 (G.O. Dom Bosco)"],
+    highlight: false,
+  },
+  {
+    day: "Sexta",
+    times: ["10h (Missa)"],
+    highlight: false,
+  },
+  {
     day: "Domingos",
     times: ["07h", "19h"],
     highlight: true,
-  },
-  {
-    day: "Segunda e Sexta",
-    times: ["20h (Seg)", "10h (Sex)"],
-    highlight: false,
-  },
-  {
-    day: "Terça e Quarta",
-    times: ["10h (Ter)", "19h30 (Qua)"],
-    highlight: false,
   },
 ];
 

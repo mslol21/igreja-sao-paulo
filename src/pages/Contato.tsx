@@ -17,6 +17,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import heroImage from "@/assets/hero-sao-paulo.jpg";
+import churchFacade from "@/assets/church-facade.jpg";
 
 const Contato = () => {
   return (
@@ -113,8 +114,8 @@ const Contato = () => {
                       <div>
                         <h3 className="font-semibold text-foreground mb-1">Horário de Atendimento</h3>
                         <p className="text-muted-foreground">
-                          Terça a Sexta: 9h às 12h e 13h30 às 17h<br />
-                          Sábado: 9h às 12h
+                          Terça a Sexta: 9:00 - 12:00 e 13:30 - 17:00<br />
+                          Sábado: 9:00 - 12:00
                         </p>
                       </div>
                     </div>
@@ -251,28 +252,46 @@ const Contato = () => {
               Como Chegar
             </h2>
             <p className="text-muted-foreground">
-              Encontre-nos no coração da cidade
+              Estamos localizados no Jardim São Paulo, Zona Leste de São Paulo
             </p>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.98 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="max-w-4xl mx-auto rounded-xl overflow-hidden shadow-card"
-          >
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.197590296618!2d-46.6388890845437!3d-23.561684267621082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAvenida%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%20Brasil!5e0!3m2!1spt-BR!2sbr!4v1643723893121!5m2!1spt-BR!2sbr"
-              width="100%"
-              height="400"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Localização da Paróquia"
-            />
-          </motion.div>
+          <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+            {/* Church Image */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="rounded-xl overflow-hidden shadow-card"
+            >
+              <img
+                src={churchFacade}
+                alt="Fachada da Paróquia São Paulo Apóstolo"
+                className="w-full h-full object-cover"
+                style={{ height: '450px' }}
+              />
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="rounded-xl overflow-hidden shadow-card"
+            >
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.1837823456!2d-46.40629!3d-23.5327778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce66a1f0e8e8e1%3A0x8e8e8e8e8e8e8e8e!2sAv.%20Jos%C3%A9%20Higino%20Neves%2C%201075%20-%20Jardim%20S%C3%A3o%20Paulo%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1709782452000!5m2!1spt-BR!2sbr"
+                width="100%"
+                height="450"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Localização da Paróquia"
+              />
+            </motion.div>
+          </div>
         </div>
       </section>
     </Layout>

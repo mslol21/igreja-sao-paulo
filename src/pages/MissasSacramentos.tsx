@@ -64,7 +64,7 @@ const sacramentos = [
       "Arrependimento sincero",
       "Propósito de mudança de vida",
     ],
-    schedule: "Sábados: 15h às 16h30 | Antes das missas (30 min)",
+    schedule: "Terças-feiras: 13h30 às 17h | Mediante agendamento",
   },
   {
     id: "uncao",
@@ -141,9 +141,11 @@ const MissasSacramentos = () => {
                 <CardContent>
                   <ul className="space-y-2 text-sm">
                     <li className="flex justify-between"><span>Segunda-feira (Almas)</span> <span className="font-bold text-accent">20h</span></li>
-                    <li className="flex justify-between"><span>Terça-feira</span> <span className="font-bold text-accent">10h</span></li>
-                    <li className="flex justify-between"><span>Sexta-feira</span> <span className="font-bold text-accent">10h</span></li>
-                    <li className="flex justify-between border-t border-muted pt-2 mt-2"><span>Domingo</span> <span className="font-bold text-accent">07h | 19h</span></li>
+                    <li className="flex justify-between"><span>Terça-feira (Missa)</span> <span className="font-bold text-accent">10h</span></li>
+                    <li className="flex justify-between"><span>Terça-feira (Terço Homens/Mães)</span> <span className="font-bold text-accent">20h</span></li>
+                    <li className="flex justify-between"><span>Quarta-feira (G.O. Dom Bosco)</span> <span className="font-bold text-accent">19h30</span></li>
+                    <li className="flex justify-between"><span>Sexta-feira (Missa)</span> <span className="font-bold text-accent">10h</span></li>
+                    <li className="flex justify-between border-t border-muted pt-2 mt-2"><span>Domingo (Missas)</span> <span className="font-bold text-accent">07h | 19h</span></li>
                   </ul>
                 </CardContent>
               </Card>
@@ -160,8 +162,8 @@ const MissasSacramentos = () => {
                 <CardContent>
                   <ul className="space-y-2 text-sm">
                     <li className="flex justify-between"><span>Segunda-feira (Almas)</span> <span className="font-bold">15h</span></li>
-                    <li className="flex justify-between"><span>Quinta-feira</span> <span className="font-bold">20h</span></li>
-                    <li className="flex justify-between border-t border-muted pt-2 mt-2"><span>Domingo</span> <span className="font-bold">10h30</span></li>
+                    <li className="flex justify-between"><span>Quinta-feira (Missa)</span> <span className="font-bold">20h</span></li>
+                    <li className="flex justify-between border-t border-muted pt-2 mt-2"><span>Domingo (Missa)</span> <span className="font-bold">10h30</span></li>
                   </ul>
                 </CardContent>
               </Card>
@@ -177,9 +179,9 @@ const MissasSacramentos = () => {
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2 text-sm">
-                    <li className="flex justify-between"><span>Quinta-feira</span> <span className="font-bold">20h</span></li>
-                    <li className="flex justify-between"><span>Sexta-feira (Terço)</span> <span className="font-bold">20h</span></li>
-                    <li className="flex justify-between border-t border-muted pt-2 mt-2"><span>Domingo</span> <span className="font-bold">10h30</span></li>
+                    <li className="flex justify-between"><span>Quinta-feira (Missa)</span> <span className="font-bold">20h</span></li>
+                    <li className="flex justify-between"><span>Sexta-feira (Terço Homens)</span> <span className="font-bold">20h</span></li>
+                    <li className="flex justify-between border-t border-muted pt-2 mt-2"><span>Domingo (Missa)</span> <span className="font-bold">10h30</span></li>
                   </ul>
                 </CardContent>
               </Card>
@@ -195,8 +197,8 @@ const MissasSacramentos = () => {
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2 text-sm">
-                    <li className="flex justify-between"><span>Terça-feira</span> <span className="font-bold">20h</span></li>
-                    <li className="flex justify-between border-t border-muted pt-2 mt-2"><span>Domingo</span> <span className="font-bold">09h</span></li>
+                    <li className="flex justify-between"><span>Terça-feira (Missa)</span> <span className="font-bold">20h</span></li>
+                    <li className="flex justify-between border-t border-muted pt-2 mt-2"><span>Domingo (Missa)</span> <span className="font-bold">09h</span></li>
                   </ul>
                 </CardContent>
               </Card>
@@ -212,19 +214,28 @@ const MissasSacramentos = () => {
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2 text-sm">
-                    <li className="flex justify-between"><span>Terça-feira</span> <span className="font-bold">20h</span></li>
-                    <li className="flex justify-between border-t border-muted pt-2 mt-2"><span>Domingo</span> <span className="font-bold">09h</span></li>
+                    <li className="flex justify-between"><span>Terça-feira (Missa)</span> <span className="font-bold">20h</span></li>
+                    <li className="flex justify-between border-t border-muted pt-2 mt-2"><span>Domingo (Missa)</span> <span className="font-bold">09h</span></li>
                   </ul>
                 </CardContent>
               </Card>
             </div>
 
-            <div className="text-center max-w-2xl mx-auto p-6 bg-muted/50 rounded-xl">
-              <h3 className="font-semibold mb-2">Confissões (Igreja Matriz)</h3>
-              <p className="text-sm text-muted-foreground">
-                Terças-feiras: 13h30 às 17h<br />
-                Ou mediante agendamento prévio na secretaria paroquial.
-              </p>
+            <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+              <div className="text-center p-6 bg-muted/50 rounded-xl">
+                <h3 className="font-semibold mb-2">Confissões (Igreja Matriz)</h3>
+                <p className="text-sm text-muted-foreground">
+                  Terças-feiras: 13h30 às 17h<br />
+                  Ou mediante agendamento prévio na secretaria.
+                </p>
+              </div>
+              <div className="text-center p-6 bg-muted/50 rounded-xl">
+                <h3 className="font-semibold mb-2">Secretaria Paroquial</h3>
+                <p className="text-sm text-muted-foreground">
+                  Terça a Sexta: 9:00 - 12:00 e 13:30 - 17:00<br />
+                  Sábado: 9:00 - 12:00
+                </p>
+              </div>
             </div>
           </motion.div>
         </div>

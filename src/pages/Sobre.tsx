@@ -3,6 +3,7 @@ import { Layout } from "@/components/layout/Layout";
 import { Cross, Heart, Users, Target, BookOpen } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import heroImage from "@/assets/hero-sao-paulo.jpg";
+import peWilson from "@/assets/pe-wilson.jpg";
 
 const values = [
   {
@@ -29,20 +30,11 @@ const values = [
 
 const pastoralTeam = [
   {
-    name: "Pe. João da Silva",
+    name: "Pe. Wilson Pereira",
     role: "Pároco",
-    description: "Ordenado há 15 anos, lidera nossa comunidade com dedicação e amor pastoral.",
-  },
-  {
-    name: "Pe. Carlos Santos",
-    role: "Vigário Paroquial",
-    description: "Responsável pela pastoral juvenil e catequese de adultos.",
-  },
-  {
-    name: "Diác. Antônio Oliveira",
-    role: "Diácono Permanente",
-    description: "Coordena as pastorais sociais e o grupo de ministros da Eucaristia.",
-  },
+    image: peWilson,
+    description: "Lidera nossa comunidade com dedicação e amor pastoral.",
+  }
 ];
 
 const Sobre = () => {
@@ -192,8 +184,16 @@ const Sobre = () => {
               >
                 <Card className="card-hover h-full">
                   <CardContent className="p-6 text-center">
-                    <div className="w-24 h-24 rounded-full bg-secondary mx-auto mb-4 flex items-center justify-center">
-                      <Users className="h-10 w-10 text-muted-foreground" />
+                    <div className="w-24 h-24 rounded-full bg-secondary mx-auto mb-4 overflow-hidden flex items-center justify-center">
+                      {member.image ? (
+                        <img 
+                          src={member.image} 
+                          alt={member.name}
+                          className="w-full h-full object-cover"
+                        />
+                      ) : (
+                        <Users className="h-10 w-10 text-muted-foreground" />
+                      )}
                     </div>
                     <h3 className="font-heading text-xl font-semibold text-foreground">
                       {member.name}

@@ -107,22 +107,15 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <Clock className="h-5 w-5 mt-0.5 opacity-80 flex-shrink-0" />
                 <div className="text-sm opacity-80">
+                  <p className="font-medium opacity-100">Segunda (20h) | Ter e Sex (10h)</p>
+                  <p>Ter (20h: Terços) | Qua (19h30: G.O.)</p>
+                </div>
+              </li>
+              <li className="flex items-start gap-3">
+                <Clock className="h-5 w-5 mt-0.5 opacity-80 flex-shrink-0" />
+                <div className="text-sm opacity-80">
                   <p className="font-medium opacity-100">Domingos (Matriz)</p>
                   <p>7h e 19h</p>
-                </div>
-              </li>
-              <li className="flex items-start gap-3">
-                <Clock className="h-5 w-5 mt-0.5 opacity-80 flex-shrink-0" />
-                <div className="text-sm opacity-80">
-                  <p className="font-medium opacity-100">Segunda (Almas)</p>
-                  <p>20h</p>
-                </div>
-              </li>
-              <li className="flex items-start gap-3">
-                <Clock className="h-5 w-5 mt-0.5 opacity-80 flex-shrink-0" />
-                <div className="text-sm opacity-80">
-                  <p className="font-medium opacity-100">Terça, Sexta e Quarta</p>
-                  <p>10h (Ter/Sex) | 19h30 (Qua)</p>
                 </div>
               </li>
             </ul>
