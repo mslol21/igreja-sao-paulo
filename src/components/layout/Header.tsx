@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Cross } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
+import logoImage from "@/assets/logo.png";
 
 const navigation = [
   { name: "Início", href: "/" },
@@ -23,8 +24,12 @@ export function Header() {
         <div className="flex h-16 lg:h-20 items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
-            <div className="flex items-center justify-center w-10 h-10 rounded-full bg-primary">
-              <Cross className="h-5 w-5 text-primary-foreground" />
+            <div className="relative flex items-center justify-center w-12 h-12 rounded-full overflow-hidden bg-white border border-border">
+              <img 
+                src={logoImage} 
+                alt="Logo Paróquia São Paulo Apóstolo" 
+                className="w-full h-full object-contain scale-110"
+              />
             </div>
             <div className="hidden sm:block">
               <h1 className="font-heading text-lg font-semibold text-foreground leading-tight">
@@ -55,7 +60,7 @@ export function Header() {
           <div className="hidden lg:flex">
             <Button asChild variant="default" size="sm">
               <a
-                href="https://wa.me/551125553970"
+                href="https://wa.me/5511998677292"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -107,7 +112,7 @@ export function Header() {
                 <div className="pt-4 px-4">
                   <Button asChild className="w-full">
                     <a
-                      href="https://wa.me/551125553970"
+                      href="https://wa.me/5511998677292"
                       target="_blank"
                       rel="noopener noreferrer"
                     >

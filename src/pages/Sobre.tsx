@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Layout } from "@/components/layout/Layout";
 import { Cross, Heart, Users, Target, BookOpen } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-import heroImage from "@/assets/hero-church.jpg";
+import heroImage from "@/assets/hero-sao-paulo.jpg";
 
 const values = [
   {
@@ -56,6 +56,7 @@ const Sobre = () => {
             src={heroImage}
             alt="Paróquia São Paulo Apóstolo"
             className="w-full h-full object-cover"
+            style={{ objectPosition: 'center 20%' }}
           />
           <div className="absolute inset-0 bg-primary/80 backdrop-blur-sm" />
         </div>

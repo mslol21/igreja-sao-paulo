@@ -4,7 +4,7 @@ import { Cross, Clock, Phone, Calendar } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import heroImage from "@/assets/hero-church.jpg";
+import heroImage from "@/assets/hero-sao-paulo.jpg";
 
 const sacramentos = [
   {
@@ -90,6 +90,7 @@ const MissasSacramentos = () => {
             src={heroImage}
             alt="Paróquia São Paulo Apóstolo"
             className="w-full h-full object-cover"
+            style={{ objectPosition: 'center 20%' }}
           />
           <div className="absolute inset-0 bg-primary/80 backdrop-blur-sm" />
         </div>

@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Clock, Calendar, MessageCircle, Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
-import heroImage from "@/assets/hero-church.jpg";
+import heroImage from "@/assets/hero-sao-paulo.jpg";
 
 export function HeroSection() {
   return (
@@ -13,6 +13,7 @@ export function HeroSection() {
           src={heroImage}
           alt="Fachada da Paróquia São Paulo Apóstolo"
           className="w-full h-full object-cover"
+          style={{ objectPosition: 'center 25%' }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-primary/50" />
       </div>
@@ -58,7 +59,7 @@ export function HeroSection() {
             {/* Secondary Links */}
             <div className="flex flex-wrap gap-4 mt-6">
               <a
-                href="https://wa.me/551125553970"
+                href="https://wa.me/5511998677292"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center text-primary-foreground/80 hover:text-primary-foreground transition-colors text-sm"

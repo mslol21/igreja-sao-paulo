@@ -4,7 +4,7 @@ import { Cross, Calendar, FileText, ArrowRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import heroImage from "@/assets/hero-church.jpg";
+import heroImage from "@/assets/hero-sao-paulo.jpg";
 
 const news = [
   {
@@ -77,6 +77,7 @@ const Noticias = () => {
             src={heroImage}
             alt="Paróquia São Paulo Apóstolo"
             className="w-full h-full object-cover"
+            style={{ objectPosition: 'center 20%' }}
           />
           <div className="absolute inset-0 bg-primary/80 backdrop-blur-sm" />
         </div>

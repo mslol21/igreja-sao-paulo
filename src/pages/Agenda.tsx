@@ -3,7 +3,7 @@ import { Layout } from "@/components/layout/Layout";
 import { Calendar, MapPin, Clock, Cross } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import heroImage from "@/assets/hero-church.jpg";
+import heroImage from "@/assets/hero-sao-paulo.jpg";
 
 const events = [
   {
@@ -109,6 +109,7 @@ const Agenda = () => {
             src={heroImage}
             alt="Paróquia São Paulo Apóstolo"
             className="w-full h-full object-cover"
+            style={{ objectPosition: 'center 20%' }}
           />
           <div className="absolute inset-0 bg-primary/80 backdrop-blur-sm" />
         </div>

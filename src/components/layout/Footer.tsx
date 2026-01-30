@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
 import { 
-  Cross, 
-  MapPin, 
-  Phone, 
+  MapPin,
+  Phone,
   Mail, 
   Clock,
   Instagram,
   Facebook,
   Youtube
 } from "lucide-react";
+import logoImage from "@/assets/logo.png";
 
 export function Footer() {
   return (
@@ -18,8 +18,12 @@ export function Footer() {
           {/* Parish Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-4">
-              <div className="flex items-center justify-center w-10 h-10 rounded-full bg-accent">
-                <Cross className="h-5 w-5 text-accent-foreground" />
+              <div className="flex items-center justify-center w-12 h-12 rounded-full overflow-hidden bg-white border border-white/20">
+                <img 
+                  src={logoImage} 
+                  alt="Logo Paróquia São Paulo Apóstolo" 
+                  className="w-full h-full object-contain scale-110"
+                />
               </div>
               <div>
                 <h3 className="font-heading text-lg font-semibold">
@@ -85,10 +89,10 @@ export function Footer() {
               <li className="flex items-center gap-3">
                 <Mail className="h-5 w-5 opacity-80 flex-shrink-0" />
                 <a 
-                  href="mailto:contato@saopauloapostolo.com.br" 
+                  href="mailto:secretaria@paroquiasaopaulo.org.br" 
                   className="text-sm opacity-80 hover:opacity-100 transition-opacity"
                 >
-                  contato@saopauloapostolo.com.br
+                  secretaria@paroquiasaopaulo.org.br
                 </a>
               </li>
             </ul>

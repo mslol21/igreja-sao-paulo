@@ -16,7 +16,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import heroImage from "@/assets/hero-church.jpg";
+import heroImage from "@/assets/hero-sao-paulo.jpg";
 
 const Contato = () => {
   return (
@@ -29,6 +29,7 @@ const Contato = () => {
             src={heroImage}
             alt="Paróquia São Paulo Apóstolo"
             className="w-full h-full object-cover"
+            style={{ objectPosition: 'center 20%' }}
           />
           <div className="absolute inset-0 bg-primary/80 backdrop-blur-sm" />
         </div>
@@ -120,10 +121,26 @@ const Contato = () => {
                   </CardContent>
                 </Card>
 
+                <Card>
+                  <CardContent className="p-6">
+                    <div className="flex items-start gap-4">
+                      <div className="flex items-center justify-center w-12 h-12 rounded-full bg-accent/10 text-accent flex-shrink-0">
+                        <Mail className="h-6 w-6" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-foreground mb-1">E-mail</h3>
+                        <a href="mailto:secretaria@paroquiasaopaulo.org.br" className="text-muted-foreground hover:text-accent transition-colors">
+                          secretaria@paroquiasaopaulo.org.br
+                        </a>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
                 {/* WhatsApp CTA */}
                 <Button asChild size="lg" className="w-full bg-green-600 hover:bg-green-700">
                   <a 
-                    href="https://wa.me/5511999999999?text=Olá! Gostaria de mais informações sobre a paróquia." 
+                    href="https://wa.me/5511998677292?text=Olá! Gostaria de mais informações sobre a paróquia." 
                     target="_blank" 
                     rel="noopener noreferrer"
                   >
